@@ -1,0 +1,251 @@
+/*! Bloomfield Ren Faire version 0.0.1 - Jul 2026 */
+
+/* Variables */
+:root{
+    --color-primary: #22617A; /* Blue */
+    --color-secondary: #6B7F1D; /* Green */
+    --color-accent: #821A1D; /* Maroon */
+    --main-bg: rgba(212, 221, 247,0.9);
+
+    --container-width: 63.36rem; /* 980px or close to */
+
+    --header-height: 3rem;
+    --footer-height: 2rem;
+
+    --rem-quarter: 0.25rem;
+    --rem-half: 0.5rem;
+    --rem-one: 1rem;
+    --rem-one-and-quarter: 1.25rem;
+    --rem-one-and-half: 1.5rem;
+    --rem-two: 2rem;
+
+    --seconds-quarter: 0.25s;
+    --seconds-half: 0.5s;
+    --seconds-one: 1s;
+}
+
+/* Base */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+mark {
+    padding: 0 0.25rem;
+}
+
+body {
+    background-color: black;
+    margin-top: var(--header-height);
+    margin-bottom: var(--footer-height);
+}
+
+main {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--rem-half);
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    background-color: var(--color-secondary);
+    z-index: 1;
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: var(--footer-height);
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+nav {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 1rem 0.5rem;
+    color: white;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.nav-links {
+    /* display: flex; */
+    list-style: none;
+    /* gap: 20px; */
+    top: 5rem;
+}
+
+.nav-links a {
+    color: white;
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: black;
+    transition: var(--seconds-quarter);
+}
+
+.nav-title {
+    /* display: inline-block; */
+    float: right;
+    top: -1.5rem;
+    position: relative;
+}
+
+/* Highlight the current page in the menu */
+nav a[aria-current="page"] {
+    color: white;
+    background-color: var(--color-accent);
+}
+
+nav a[aria-current="page"]:hover {
+    color: white;
+    background-color: black;
+    transition: var(--seconds-quarter);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.to-top {
+    background-color: var(--main-bg);
+    position: fixed;
+    right: 1.25rem;
+    bottom: 3.5rem;
+    z-index: 2;
+    opacity: 0.75;
+    border-radius: 2rem;
+    border: 0.1rem solid black;
+    display: inline-block;
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+.to-top span {
+    color: black;
+}
+
+.to-top:hover {
+    opacity: 1;
+}
+
+/* Icons */
+/* fill: currentColor makes the icon inherit the CSS `color` property,
+     same as an icon font would with `color`, but with no font build step. */
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#icon-up-arrow {
+    color: black;
+}
+
+/* Media Queries */
+
+/* Mobile ONLY */
+@media only screen and (max-width: 600px) {
+    header {
+        bottom: 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: -9rem;
+        left: 0;
+        background-color: var(--color-secondary);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    nav li {
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    /* Class added by JavaScript to display the menu */
+    .nav-links.active {
+        display: flex;
+    }
+    footer {
+        top: 0;
+    }
+}
+
+/* Tablet ONLY */
+@media (max-width: 1024px) and (min-width: 601px) {
+
+}
+
+/* Desktop ONLY */
+@media only screen and (min-width: 1025px) {
+    .nav-links {
+        display: flex;
+    }
+    footer {
+        bottom: 0;
+    }
+    header {
+        top: 0;
+    }
+}
+
+/* Pages */
+
+/* Home */
+
+.to-do {
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
+/* FAQ */
+
+details {
+    cursor:pointer;
+    margin-bottom: 1rem;
+}
