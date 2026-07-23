@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Font Previewer</title>
+<style>
+
+  @font-face {
+    font-family: "Andalus";
+    src: url("fonts/andlso.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Avalanche Script TT";
+    src: url("fonts/avalanchescripttt.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Berkshire Swash Regular";
+    src: url("fonts/BerkshireSwash-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Carolingia";
+    src: url("fonts/carolingia.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Decorative Black";
+    src: url("fonts/CinzelDecorative-Black.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Decorative Bold";
+    src: url("fonts/CinzelDecorative-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Decorative Regular";
+    src: url("fonts/CinzelDecorative-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Black";
+    src: url("fonts/Cinzel-Black.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Bold";
+    src: url("fonts/Cinzel-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Extra Bold";
+    src: url("fonts/Cinzel-ExtraBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Medium";
+    src: url("fonts/Cinzel-Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Regular";
+    src: url("fonts/Cinzel-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cinzel Semi Bold";
+    src: url("fonts/Cinzel-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cloister Black";
+    src: url("fonts/CloisterBlack.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Magik";
+    src: url("fonts/CWMAGIK_.TTF") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Dark Magic";
+    src: url("fonts/DarkMagic-2O3w8.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Diploma Regular";
+    src: url("fonts/Diploma Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Knights Templar";
+    src: url("fonts/Knight2.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Magdeburg";
+    src: url("fonts/MAGDE.TTF") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Medici Text";
+    src: url("fonts/Medici Text.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Medieval Sharp Regular";
+    src: url("fonts/MedievalSharp-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Old English Text MT";
+    src: url("fonts/OLDENGL.TTF") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Pirata One Regular";
+    src: url("fonts/PirataOne-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "TeXGyreChorus";
+    src: url("fonts/texgyrechorus-mediumitalic.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Unifraktur Maguntia Regular";
+    src: url("fonts/UnifrakturMaguntia-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "UnZialish";
+    src: url("fonts/UnZialish.ttf") format("truetype");
+  }
+
+  /* Example of adding a second font — uncomment and edit:
+  @font-face {
+    font-family: "Cinzel";
+    src: url("fonts/Cinzel-Regular.ttf") format("truetype");
+  }
+  */
+
+  /* ============================================================
+     PAGE STYLES
+     ============================================================ */
+
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #f5f0e6;
+    color: #2b2216;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #d8cbb0;
+    border-radius: 6px;
+  }
+
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  input[type="range"] {
+    font-size: 1rem;
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d8cbb0;
+    border-radius: 6px;
+    resize: vertical;
+  }
+
+  #sizeValue {
+    font-weight: bold;
+  }
+
+  .preview-block {
+    background: #fff;
+    border: 1px solid #d8cbb0;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .preview-block .font-label {
+    font-size: 0.8rem;
+    color: #6b5f4a;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .preview-block .preview-text {
+    word-wrap: break-word;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+
+  #emptyMessage {
+    color: #6b5f4a;
+    font-style: italic;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Font Previewer</h1>
+
+<div class="controls">
+  <div class="control-group">
+    <label for="fontSize">Size: <span id="sizeValue">24</span>px</label>
+    <input type="range" id="fontSize" min="10" max="150" value="24">
+  </div>
+
+  <div class="control-group">
+    <label for="fontColorPicker">Color</label>
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <input type="color" id="fontColorPicker" value="#2b2216">
+      <input type="text" id="fontColorHex" value="#2b2216" maxlength="7" style="width:5.5em; font-family:monospace;">
+    </div>
+  </div>
+</div>
+
+<h4>Edit Me</h4>
+<textarea id="previewText" rows="4">Bloomfield Renaissance Faire
+The five boxing wizards jump quickly.
+abcdefghijklmnopqrstuvwxyz 0123456789
+ABCDEFGHIJKLMNOPQRSTUVWXYZ</textarea>
+
+<div id="previewContainer"></div>
+
+<script>
+  const fontSize = document.getElementById('fontSize');
+  const sizeValue = document.getElementById('sizeValue');
+  const previewText = document.getElementById('previewText');
+  const previewContainer = document.getElementById('previewContainer');
+  const fontColorPicker = document.getElementById('fontColorPicker');
+  const fontColorHex = document.getElementById('fontColorHex');
+
+  const hexPattern = /^#([0-9A-Fa-f]{6})$/;
+
+  // Keep the color swatch and the hex text box in sync with each other
+  fontColorPicker.addEventListener('input', () => {
+    fontColorHex.value = fontColorPicker.value;
+    updatePreviews();
+  });
+
+  fontColorHex.addEventListener('input', () => {
+    let value = fontColorHex.value.trim();
+    if (value && !value.startsWith('#')) value = '#' + value;
+    if (hexPattern.test(value)) {
+      fontColorPicker.value = value;
+      updatePreviews();
+    }
+  });
+
+  // Scan all stylesheets for @font-face rules and pull out the
+  // font-family names. This is what lets new fonts show up here
+  // automatically just by adding an @font-face block above --
+  // no other code changes needed.
+  function detectFontFamilies() {
+    const families = [];
+    for (const sheet of document.styleSheets) {
+      let rules;
+      try {
+        rules = sheet.cssRules || sheet.rules;
+      } catch (e) {
+        continue; // skip inaccessible stylesheets (e.g. cross-origin)
+      }
+      for (const rule of rules) {
+        if (rule instanceof CSSFontFaceRule) {
+          const family = rule.style.getPropertyValue('font-family').replace(/["']/g, '').trim();
+          if (family && !families.includes(family)) {
+            families.push(family);
+          }
+        }
+      }
+    }
+    return families;
+  }
+
+  function buildPreviews() {
+    const families = detectFontFamilies();
+    previewContainer.innerHTML = '';
+
+    if (families.length === 0) {
+      previewContainer.innerHTML = '<p id="emptyMessage">No @font-face rules found. Add one in the &lt;style&gt; block above to see a preview here.</p>';
+      return;
+    }
+
+    for (const family of families) {
+      const block = document.createElement('div');
+      block.className = 'preview-block';
+
+      const label = document.createElement('div');
+      label.className = 'font-label';
+      label.textContent = family;
+
+      const text = document.createElement('div');
+      text.className = 'preview-text';
+      text.style.fontFamily = `"${family}"`;
+      text.style.fontSize = fontSize.value + 'px';
+      text.style.color = fontColorPicker.value;
+      text.textContent = previewText.value;
+
+      block.appendChild(label);
+      block.appendChild(text);
+      previewContainer.appendChild(block);
+    }
+  }
+
+  function updatePreviews() {
+    sizeValue.textContent = fontSize.value;
+    const texts = previewContainer.querySelectorAll('.preview-text');
+    texts.forEach(el => {
+      el.style.fontSize = fontSize.value + 'px';
+      el.style.color = fontColorPicker.value;
+      el.textContent = previewText.value;
+    });
+  }
+
+  fontSize.addEventListener('input', updatePreviews);
+  previewText.addEventListener('input', updatePreviews);
+
+  buildPreviews();
+</script>
+
+</body>
+</html>
