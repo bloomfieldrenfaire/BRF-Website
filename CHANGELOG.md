@@ -26,6 +26,20 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.0.4] - 2026-08-06
+### Added
+- w3.css
+- accordions to javascript
+- home-banner.webp
+
+### Changed
+- renamed main.css to brf-css.css
+- renamed customJS.js to brf-css.js
+- mobile menu javascript
+- items to work with w3.css examples
+
+### Removed
+- FB-Profile_v0_3.png
 
 ## [0.0.3] - 2026-07-29
 ### Added

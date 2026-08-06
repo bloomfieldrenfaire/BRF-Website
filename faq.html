@@ -2,40 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="css/w3.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <title>FAQ</title>
+    <link rel="stylesheet" href="css/brf-css.css">
+    <title>Bloomfield Ren Faire</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <svg class="icon"><use href="#icon-bars"></use></svg>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a aria-current="page" href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li> 
-            </ul>
-            <span class="nav-title">Bloomfield Renaissance Faire</span>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Frequently Asked Questions</h1>
+
+<header class="w3-top brf-green">
+    <!-- 
+        Currently, we need two menus. The Desktop menu needs to be at least allowed to show the mobile menu button and hide other desktop menu links.
+    -->
+    <nav class="w3-bar w3-content">
+        <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="mobileMenu()"><svg class="icon"><use href="#icon-bars"></use></svg></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-right w3-hide-small w3-text-white">Bloomfield Renaissance Faire</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Home</a>
+        <a href="events.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Events</a>
+        <a href="faq.html" class="w3-bar-item w3-button w3-hide-small w3-text-white brf-maroon">FAQ</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Contact</a>
+    </nav>
+    <nav class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="mobileMenu">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Home</a>
+        <a href="events.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Events</a>
+        <a href="faq.html" class="w3-bar-item w3-button w3-mobile w3-text-white brf-maroon">FAQ</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Contact</a>
+    </nav>
+</header>
+    <main class="w3-content w3-container brf-parchment">
+        <section class="w3-card w3-round-large w3-paper">
+            <h1 class="w3-text-center w3-round-large w3-text-white brf-maroon">Frequently Asked Questions</h1>
             some artwork here? brief description of what this is.
         </section>
         <section>
-            <details>
-                <summary>What is the price of admission and parking?</summary>
-                <div class="answer">Free.</div>
-            </details>
-            <details>
-                <summary>I want to volunteer, who do I contact?</summary>
-                <div class="answer">The best method is <a href="mailto:bloomfieldrenfaire@gmail.com?subject=BRF%20Website%20Inquiry&body=Hello,%20BRF"><svg class="icon bg-envelope"><use href="#icon-envelope"></use></svg> bloomfieldrenfaire@gmail.com</a></div>
-            </details>
+            <button class="w3-button w3-block w3-left-align" onclick="myAccordion(this)">What is the price of admission and parking?</button>
+            <p class="w3-container w3-hide">Free.</p>
+            <button class="w3-button w3-block w3-left-align" onclick="myAccordion(this)">I want to volunteer, who do I contact?</button>
+            <p class="w3-container w3-hide">The best method is <a href="mailto:bloomfieldrenfaire@gmail.com?subject=BRF%20Website%20Inquiry&body=Hello,%20BRF"><svg class="icon bg-envelope"><use href="#icon-envelope"></use></svg> bloomfieldrenfaire@gmail.com</a></p>
+
             <p><mark>Make the questions/answers stand out from each other. maybe a different color or font or weight?</mark></p>
             <mark>at some point, order these from most common to least commonly asked</mark>
             <p>what is it?</p>
@@ -50,13 +55,13 @@
             <p>Can I smoke on the grounds?</p>
             <p>Can I consume alcohol on the grounds?</p>
         </section>
-        <a href="#" class="to-top"><svg class="icon"><use href="#icon-up-arrow"></use></svg><span> Top</span></a>
+        <a href="#" class="to-top w3-button w3-text-white"><svg class="icon"><use href="#icon-up-arrow"></use></svg> Top</a>
     </main>
-    <footer>
+    <footer class="w3-bottom w3-container w3-text-center w3-text-white brf-green">
         <small>Bloomfield Ren Faire &copy <span id="copyright-year"></span></small>
     </footer>
     <!-- Custom Javascript -->
-	<script src="js/customJS.js"></script>
+	<script src="js/brf-js.js"></script>
     <!-- ============================================= -->
     <!-- The Sprite Sheet                              -->
     <!-- Hidden on the page, referenced above via <use>. -->

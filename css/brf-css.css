@@ -1,0 +1,116 @@
+/*! Bloomfield Ren Faire version 0.0.4 - Aug 2026 */
+
+/* Variables */
+:root{
+    --color-primary: #EBC8A4; /* Parchment */
+    --color-secondary: #6B7F1D; /* Green */
+    --color-accent: #821A1D; /* Maroon */
+    --site-bg: #22617A; /* Blue */
+}
+
+.brf-parchment {
+    background-color: var(--color-primary);
+}
+
+.brf-green {
+    background-color: var(--color-secondary);
+}
+
+.brf-maroon {
+    background-color: var(--color-accent);
+}
+
+.brf-blue {
+    background-color: var(--site-bg);
+}
+
+body {
+    background-color: var(--site-bg);
+    margin-top: 38px;
+    margin-bottom: 22px;
+}
+
+.to-top {
+    background-color: var(--color-secondary);
+    position: fixed;
+    right: 1.25rem;
+    bottom: 3.5rem;
+    z-index: 2;
+    opacity: 0.75;
+    border-radius: 2rem;
+    border: 0.1rem solid black;
+    display: inline-block;
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Icons */
+/* fill: currentColor makes the icon inherit the CSS `color` property,
+     same as an icon font would with `color`, but with no font build step. */
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: currentColor;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    #icon-up-arrow {
+        color: black;
+    }
+    
+    #icon-envelope {
+        color: white;
+    }
+    
+    #icon-facebook-square {
+        color: #1877F2; /* Official color */
+    }
+    
+    /* Special class to ensure icon reminds highly visible */
+    .bg-facebook-square, .bg-tiktok {
+        background-color: white;
+    }
+    
+    .bg-envelope {
+        background-color: black;
+    }
+    
+    #icon-tiktok {
+        color: black;
+    }
+    
+    #icon-instagram-square {
+        color: #E1306C;  /* This is only one gradient color for now */
+    }
+    
+    /* Countdown */
+    .countdown {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .value {
+        font-size: 2rem;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+    }
+    
+    .label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #999;
+    }
+    
+    .debug {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #666;
+        display: none; /* Hide this, display: inline to show for debugging help */
+    }
+    
+    .finished {
+        font-size: 1.5rem;
+        color: #4ade80;
+    }

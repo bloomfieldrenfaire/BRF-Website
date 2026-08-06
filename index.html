@@ -2,35 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="css/w3.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/brf-css.css">
     <title>Bloomfield Ren Faire</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <svg class="icon"><use href="#icon-bars"></use></svg>
-            </button>
-            <ul class="nav-links">
-                <li><a aria-current="page" href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li> 
-            </ul>
-            <span class="nav-title">Bloomfield Renaissance Faire</span>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Home</h1>
-            <figure>
-                <img src="images/FB-Profile_v0_3.png" alt="BRF Welcome Banner">
-                <figcaption>
-                    This should be our CTA (Call To Action) with a banner, some text about the 2027 Ren Faire with link
-                </figcaption>
-            </figure>
+
+<header class="w3-top brf-green">
+    <!-- 
+        Currently, we need two menus. The Desktop menu needs to be at least allowed to show the mobile menu button and hide other desktop menu links.
+    -->
+    <nav class="w3-bar w3-content">
+        <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="mobileMenu()"><svg class="icon"><use href="#icon-bars"></use></svg></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-right w3-hide-small w3-text-white">Bloomfield Renaissance Faire</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-text-white brf-maroon">Home</a>
+        <a href="events.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Events</a>
+        <a href="faq.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">FAQ</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Contact</a>
+    </nav>
+    <nav class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="mobileMenu">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-text-white brf-maroon">Home</a>
+        <a href="events.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Events</a>
+        <a href="faq.html" class="w3-bar-item w3-button w3-mobile w3-text-white">FAQ</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Contact</a>
+    </nav>
+</header>
+    <main class="w3-content w3-container brf-parchment">
+        <section class="w3-card w3-round-large w3-paper">
+            <h1 class="w3-text-center w3-round-large w3-text-white brf-maroon">Home</h1>
+            <img class="w3-image w3-round-xxlarge w3-container" src="images/home-banner.webp" alt="BRF Welcome Banner">
+            <figcaption>
+                This should be our CTA (Call To Action) with a banner, some text about the 2027 Ren Faire with link
+                <h2 class="w3-text-center">The 2027 Bloomfield Renaissance Faire is July 24, at 1:00 PM</h2>
+                <h3 class="w3-text-center" id="target-label">Countdown until the Faire:</h1>
+
+                <div class="w3-flex w3-card w3-note countdown" id="countdown">
+                    <div class="w3-text-center">
+                        <div class="value" id="days">--</div>
+                        <div class="label">Days</div>
+                    </div>
+                    <div class="w3-text-center">
+                        <div class="value" id="hours">--</div>
+                        <div class="label">Hours</div>
+                    </div>
+                    <div class="w3-text-center">
+                        <div class="value" id="minutes">--</div>
+                        <div class="label">Min</div>
+                    </div>
+                    <div class="w3-text-center">
+                        <div class="value" id="seconds">--</div>
+                        <div class="label">Sec</div>
+                    </div>
+                </div>
+
+                <div class="debug" id="debug"></div>
+            </figcaption>
         </section>
         <section>
             <h2>About</h2>
@@ -38,12 +67,11 @@
         </section>
         <section>
             <h3>Website To-Do</h3>
-            <ul class="to-do">
+            <ul class="w3-ul w3-border">
                 <li>Favicon</li>
                 <li>some type of image gallery</li>
                 <li>Format - Events</li>
                 <li>Big Day, Events: Do I just want images? animated gifs (webp) would be nice. However, source images might be hard to obtain especially if events don't get finalized until later.</li>
-                <li>Format - Countdown Timer</li>
                 <li>Add google map link of Library to events page</li>
                 <li>Add google map link of Square to events page</li>
                 <li>Color scheme</li>
@@ -51,41 +79,26 @@
                 <li>images need to be .webp</li>
                 <li>Make sure responsive layout looks okay on all widths (Desktop/Tablet/Mobile)</li>
                 <li><mark>If we move to w3.css and have to use custom code, use prefix "brf-"</mark></li>
+                <li>link to BPL website (where are we putting this link?)</li>
+                <li>link to BPL FB (where are we putting this link?)</li>
             </ul>
         </section>
         <section> 
-            <h2>Testing</h2>
-
-            <section>
-                <h1 id="target-label">Countdown to July 24, 2027 at 1:00 PM</h1>
-
-                <div class="countdown" id="countdown">
-                    <div class="unit"><div class="value" id="days">--</div><div class="label">Days</div></div>
-                    <div class="unit"><div class="value" id="hours">--</div><div class="label">Hours</div></div>
-                    <div class="unit"><div class="value" id="minutes">--</div><div class="label">Min</div></div>
-                    <div class="unit"><div class="value" id="seconds">--</div><div class="label">Sec</div></div>
-                </div>
-
-                <div class="debug" id="debug"></div>
-            </section>
-
-            <q>A quote</q>
-            <blockquote>A Block quote - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore eaque velit, asperiores eligendi itaque harum eius. Sint voluptate alias fugiat.</blockquote>
-            <p><abbr title="World Health Organiztion">WHO</abbr></p>
-            <p><dfn>Definition - marks a term that is being defined</dfn></p>
-            <p><u>some underlined text</u></p>
-            <p><del>some crossed out text</del></p>
-            <p><ins>inserted text</ins></p>
-            <p><s>defines text that is no longer correct</s></p>
+            <h3>W3 CSS Links</h3>
+            <ul class="w3-ul">
+                <li><a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3 CSS</a></li>
+                <li><a href="https://www.w3schools.com/w3css/w3css_examples.asp" target="_blank">W3 CSS Examples</a></li>
+                <li><a href="https://www.w3schools.com/w3css/w3css_references.asp" target="_blank">W3 CSS References</a></li>
+            </ul>
         </section>
 
-        <a href="#" class="to-top"><svg class="icon"><use href="#icon-up-arrow"></use></svg><span> Top</span></a>
+        <a href="#" class="to-top w3-button w3-text-white"><svg class="icon"><use href="#icon-up-arrow"></use></svg> Top</a>
     </main>
-    <footer>
+    <footer class="w3-bottom w3-container w3-text-center w3-text-white brf-green">
         <small>Bloomfield Ren Faire &copy <span id="copyright-year"></span></small>
     </footer>
     <!-- Custom Javascript -->
-	<script src="js/customJS.js"></script>
+	<script src="js/brf-js.js"></script>
     <!-- ============================================= -->
     <!-- The Sprite Sheet                              -->
     <!-- Hidden on the page, referenced above via <use>. -->

@@ -2,36 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="css/w3.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/brf-css.css">
     <title>Events</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <svg class="icon"><use href="#icon-bars"></use></svg>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a aria-current="page" href="events.html">Events</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li> 
-            </ul>
-            <span class="nav-title">Bloomfield Renaissance Faire</span>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Events</h1>
+
+<header class="w3-top brf-green">
+    <!-- 
+        Currently, we need two menus. The Desktop menu needs to be at least allowed to show the mobile menu button and hide other desktop menu links.
+    -->
+    <nav class="w3-bar w3-content">
+        <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="mobileMenu()"><svg class="icon"><use href="#icon-bars"></use></svg></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-right w3-hide-small w3-text-white">Bloomfield Renaissance Faire</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Home</a>
+        <a href="events.html" class="w3-bar-item w3-button w3-hide-small w3-text-white brf-maroon">Events</a>
+        <a href="faq.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">FAQ</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Contact</a>
+    </nav>
+    <nav class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="mobileMenu">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Home</a>
+        <a href="events.html" class="w3-bar-item w3-button w3-mobile w3-text-white brf-maroon">Events</a>
+        <a href="faq.html" class="w3-bar-item w3-button w3-mobile w3-text-white">FAQ</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Contact</a>
+    </nav>
+</header>
+    <main class="w3-content w3-container brf-parchment">
+        <section class="w3-card w3-round-large w3-paper">
+            <h1 class="w3-text-center w3-round-large w3-text-white brf-maroon">Events</h1>
             some artwork here? brief description of what this is.
         </section>
         <section class="big-day">
             <h2>Big Day</h2>
             <p>info about day. Schedule of events here. google map here?</p>
             <p>BRF 2027 Big Day Saturday July 24, 2027, Rain Day will be Saturday July 31, 2027 <mark>(NEED TIMES)</mark></p>
-            <ul>
+            <ul class="w3-ul brf-blue w3-text-white">
                 <li><mark>should I add a description of what these events/booths are?</mark></li>
                 <li>Face Paint</li>
                 <li>Scavenger Hunt</li>
@@ -68,13 +76,13 @@
                 <li>Faerie Tales (if we need to fill a slot)</li>
             </ul>
         </section>
-        <a href="#" class="to-top"><svg class="icon"><use href="#icon-up-arrow"></use></svg><span> Top</span></a>
+        <a href="#" class="to-top w3-button w3-text-white"><svg class="icon"><use href="#icon-up-arrow"></use></svg> Top</a>
     </main>
-    <footer>
+    <footer class="w3-bottom w3-container w3-text-center w3-text-white brf-green">
         <small>Bloomfield Ren Faire &copy <span id="copyright-year"></span></small>
     </footer>
     <!-- Custom Javascript -->
-	<script src="js/customJS.js"></script>
+	<script src="js/brf-js.js"></script>
     <!-- ============================================= -->
     <!-- The Sprite Sheet                              -->
     <!-- Hidden on the page, referenced above via <use>. -->
