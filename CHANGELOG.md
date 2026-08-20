@@ -26,6 +26,22 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.0.5] - 2026-08-20
+### Added
+- bpl logo
+- links to Bloomfield Public Library Website and Facebook
+- google map embed to Courthouse and Bloomfield Library
+- slideshow examples
+- brf 2026 image folder
+- favicon.ico (may need to revisit)
+
+### Changed
+- how classes for icon backgrounds are named. Now are called, "brf-bg-white" and "brf-bg-black"
+- brf-js.js by breaking it into smaller javacript files: brf-general for most pages, brf-countdown for the countdown on the home page, brf-slideshow for image slideshow
+
+### Fixed
+- sizing on envelope icon
+
 ## [0.0.4] - 2026-08-06
 ### Added
 - w3.css
