@@ -26,6 +26,26 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.0.6] - 2026-08-27
+### Added
+- custom fonts
+- sprite.svg, to hold our icons
+- sir flower pot logo
+- about section to home page
+
+### Changed
+- color scheme
+- general style changes across all pages
+- commented out image slideshows on events page (they're there if we every need them)
+- fipped favicon horizontal
+
+### Fixed
+- slideshow images of different heights causing the previous/next buttons to "jump". Will require more work when I get to tablet media queries.
+
+### Removed
+- old-brf-css.css
+- embedded svg icons from every single html page. (the file size savings is amazing!)
+
 ## [0.0.5] - 2026-08-20
 ### Added
 - bpl logo
