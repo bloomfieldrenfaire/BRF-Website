@@ -19,13 +19,13 @@
     <nav class="w3-bar w3-content">
         <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="mobileMenu()"><svg class="icon"><use href="images/sprite.svg#icon-bars"></use></svg></a>
         <a href="index.html" class="w3-bar-item w3-button w3-right w3-hide-small">Bloomfield Renaissance Faire</a>
-        <a href="index.html" class="w3-bar-item w3-button w3-hide-small brf-color-tertiary">Home</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small brf-color-accent">Home</a>
         <a href="events.html" class="w3-bar-item w3-button w3-hide-small">Events</a>
         <a href="faq.html" class="w3-bar-item w3-button w3-hide-small">FAQ</a>
         <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
     </nav>
     <nav class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="mobileMenu">
-        <a href="index.html" class="w3-bar-item w3-button w3-mobile brf-color-tertiary">Home</a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile brf-color-accent">Home</a>
         <a href="events.html" class="w3-bar-item w3-button w3-mobile">Events</a>
         <a href="faq.html" class="w3-bar-item w3-button w3-mobile">FAQ</a>
         <a href="contact.html" class="w3-bar-item w3-button w3-mobile">Contact</a>
@@ -33,14 +33,21 @@
 </header>
     <main class="w3-content w3-container brf-color-primary">
         <section class="w3-card w3-round-large w3-paper">
-            <h1 class="w3-text-center w3-round-large brf-color-accent brf-font-magik">Bloomfield Renaissance Faire</h1>
+            <h1 class="w3-text-center w3-round-large brf-color-accent w3-text-white brf-font-magik">Bloomfield Renaissance Faire</h1>
             <img class="w3-image w3-container" src="images/home-banner.webp" alt="BRF Welcome Banner">
             <figcaption>
                 This should be our CTA (Call To Action) with a banner, some text about the 2027 Ren Faire with link
+                <div class="w3-button w3-flex brf-flex-center">
+                    <a href="events.html" target="_blank">
+                        <img src="images/Flags/Flag-Tan-B-Rt.gif" alt="" class="w3-image">
+                        <img src="images/Flags/Flag-Green-R-Rt.gif" alt="" class="w3-image">
+                        <img src="images/Flags/Flag-Red-F-Rt.gif" alt="" class="w3-image">
+                    </a>
+                </div>
                 <h2 class="w3-text-center">The 2027 Bloomfield Renaissance Faire is July 24, at 1:00 PM</h2>
                 <h3 class="w3-text-center" id="target-label">Countdown until the Faire:</h1>
 
-                <div class="w3-flex countdown brf-site-bg" id="countdown">
+                <div class="w3-flex countdown w3-topbar" id="countdown">
                     <div class="w3-text-center">
                         <div class="value" id="days">--</div>
                         <div class="label">Days</div>
@@ -63,9 +70,9 @@
             </figcaption>
         </section>
         <section>
-            <h2 class="w3-text-center w3-round brf-color-tertiary brf-font-magik">About</h2>
+            <h2 class="w3-text-center w3-round brf-color-secondary w3-text-white brf-font-magik">About</h2>
             <div class="w3-content w3-flex">
-                <img src="images/Sir-Flower-Pot-stroke-white.webp" alt="Sir Flower Pot with a white stroke" class="w3-image brf-icon-sir-flower-pot">
+                <img src="images/Sir-Flowerpot.webp" alt="Sir Flowerpot logo" class="w3-image brf-icon-sir-flower-pot">
             </div>
             <div class="w3-panel w3-light-grey">
                 <p>The Bloomfield Renaissance Faire is an event filled with crafts, clothing, food, sports, and entertainment of the renaissance era. It's a place to make connections where one might not ordinarily make them. The community support is what makes the faire possible. This can be through donations, volunteering or simply participating in an activity. The more the community becomes involved, the bigger and better next year's ren faire will be.</p>
@@ -73,8 +80,9 @@
             </div>
         </section>
         <section>
-            <h3 class="w3-text-center w3-round brf-color-tertiary brf-font-magik">Website To-Do</h3>
-            <ul class="w3-ul w3-border brf-color-secondary">
+            <h3 class="w3-text-center w3-round brf-color-secondary w3-text-white brf-font-magik">Website To-Do</h3>
+            <ul class="w3-ul w3-border brf-color-accent w3-text-white">
+                <li>Flag Red F Rt animation needs fixed</li>
                 <li>Figure out what we're doing for CTA on home page</li>
                 <li>remove unused fonts from website that I was testing and from css file.</li>
                 <li>When we're happy with the fonts, remove font testing directory from site.</li>
@@ -88,7 +96,7 @@
             </ul>
         </section>
         <section> 
-            <h3 class="w3-text-center w3-round brf-color-tertiary brf-font-magik">W3 CSS Links</h3>
+            <h3 class="w3-text-center w3-round brf-color-secondary w3-text-white brf-font-magik">W3 CSS Links</h3>
             <ul class="w3-ul">
                 <li><a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3 CSS</a></li>
                 <li><a href="https://www.w3schools.com/w3css/w3css_examples.asp" target="_blank">W3 CSS Examples</a></li>

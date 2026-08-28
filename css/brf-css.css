@@ -1,12 +1,11 @@
-/*! Bloomfield Ren Faire version 0.0.6 - Aug 2026 */
+/*! Bloomfield Ren Faire version 0.0.7 - Aug 2026 */
 
 /* Variables */
 :root{
-    --color-primary: #A4D3EA; /* Light Blue */
-    --color-secondary: #BBA4EA; /* Violet */
-    --color-tertiary: #D3EAA4; /* Light Green */
-    --color-accent: #EABBA4; /* Light Orange */
-    --site-bg: #EADEA4; /* Light Gold */
+    --color-primary: #f2e394; /* Tan/Parchment */
+    --color-secondary: #588c7e; /* Green */
+    --color-accent: #d96459; /* Red/Maroon? */
+    --site-bg: black; /* Black */
 }
 
 .brf-color-primary {
@@ -27,6 +26,11 @@
 
 .brf-site-bg {
     background-color: var(--site-bg);
+}
+
+/* Let's makes it so I can change the nav/footer font color at the drop of a hat */
+nav, footer {
+    color: white;
 }
 
 /* Fonts */

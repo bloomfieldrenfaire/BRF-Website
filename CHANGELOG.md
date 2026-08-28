@@ -26,11 +26,19 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.0.7] - 2026-08-28
+### Added
+- flag animated gifs
+
+### Changed
+- color scheme
+- recolored Sir Flowerpot to match new color scheme
+
 ## [0.0.6] - 2026-08-27
 ### Added
 - custom fonts
 - sprite.svg, to hold our icons
-- sir flower pot logo
+- sir flowerpot logo
 - about section to home page
 
 ### Changed
