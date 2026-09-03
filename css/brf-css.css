@@ -33,6 +33,12 @@ nav, footer {
     color: white;
 }
 
+.brf-cta {
+    border: 2rem solid transparent; /* Required for border-image */
+    border-image: url(../images/cta-border.webp) 31 stretch;
+    padding: 1rem;
+}
+
 /* Fonts */
 
 /* Define and link to our fonts */
@@ -73,6 +79,7 @@ body {
 /* I know w3 css has w3-margin-bottom, but 16px just isn't enough for me */
 section {
     margin-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .to-top {
@@ -162,6 +169,10 @@ section {
 
 .brf-flex-center {
     justify-content: center;
+}
+
+.brf-cta a {
+    text-decoration: none;
 }
 
 /* this class is also used by javascript so use caution when renaming */

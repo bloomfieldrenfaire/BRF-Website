@@ -26,6 +26,20 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.0.8] - 2026-09-03
+### Added
+- flag animated webp's (modern animated gifs with better compression)
+- events-banner.webp
+- Tent-2027-Flag.webp (This is our animated call-to-action image)
+- cta-border.webp (image that borders our call-to-action button)
+
+### Changed
+- home page call-to-action area
+
+### Removed
+- flag animated gifs
+- home-banner.webp
+
 ## [0.0.7] - 2026-08-28
 ### Added
 - flag animated gifs
