@@ -26,6 +26,20 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.0.9] - 2026-09-10
+### Added
+- animated question marks images to FAQ page hero section
+- animated mailbox image to contact page hero section
+- some placeholder images for the events pages based on booth poster designs
+
+### Fixed
+- using proper w3 text colors for menu links
+- renamed magik font filename
+
+### Removed
+- font testing folder
+- Medici Text.tff (Had been added for testing and wasn't being used)
+
 ## [0.0.8] - 2026-09-03
 ### Added
 - flag animated webp's (modern animated gifs with better compression)

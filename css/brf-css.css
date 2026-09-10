@@ -1,4 +1,4 @@
-/*! Bloomfield Ren Faire version 0.0.7 - Aug 2026 */
+/*! Bloomfield Ren Faire version 0.0.9 - Sep 2026 */
 
 /* Variables */
 :root{
@@ -16,21 +16,12 @@
     background-color: var(--color-secondary);
 }
 
-.brf-color-tertiary {
-    background-color: var(--color-tertiary);
-}
-
 .brf-color-accent {
     background-color: var(--color-accent);
 }
 
 .brf-site-bg {
     background-color: var(--site-bg);
-}
-
-/* Let's makes it so I can change the nav/footer font color at the drop of a hat */
-nav, footer {
-    color: white;
 }
 
 .brf-cta {
@@ -49,12 +40,7 @@ nav, footer {
 
 @font-face {
     font-family: "Magik";
-    src: url("../fonts/CWMAGIK_.TTF") format("truetype");
-}
-
-@font-face {
-    font-family: "Medici Text";
-    src: url("../fonts/Medici Text.ttf") format("truetype");
+    src: url("../fonts/Magik.ttf") format("truetype");
 }
 
 /* Create brf font classes */
@@ -64,10 +50,6 @@ nav, footer {
 
 .brf-font-magik {
     font-family: "Magik", "Times New Roman", serif;
-}
-
-.brf-font-medici {
-    font-family: "Medici Text", "Times New Roman", serif;
 }
 
 body {
@@ -94,6 +76,10 @@ section {
     display: inline-block;
     padding: 0.5rem;
     vertical-align: middle;
+}
+
+.brf-center {
+    margin: 0 auto;
 }
 
 /* Icons */
