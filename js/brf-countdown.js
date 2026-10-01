@@ -3,12 +3,12 @@
 // Format: new Date(year, monthIndex(0-based), day, hour, minute)
 const targetDate = new Date(2027, 6, 24, 13, 0, 0); // July 24, 2027, 01:00 pm (local time)
 
-const daysEl = document.getElementById('days');
-const hoursEl = document.getElementById('hours');
-const minutesEl = document.getElementById('minutes');
-const secondsEl = document.getElementById('seconds');
-const debugEl = document.getElementById('debug');
-const countdownEl = document.getElementById('countdown');
+const daysEl = document.getElementById('js-days');
+const hoursEl = document.getElementById('js-hours');
+const minutesEl = document.getElementById('js-minutes');
+const secondsEl = document.getElementById('js-seconds');
+const debugEl = document.getElementById('js-debug');
+const countdownEl = document.getElementById('js-countdown');
 
 function pad(n) {
 	return String(n).padStart(2, '0');
@@ -19,7 +19,7 @@ function updateCountdown() {
 	const diffMs = targetDate - now;
 
 	if (diffMs <= 0) {
-		countdownEl.innerHTML = '<div class="finished">🎉 Time reached!</div>';
+		countdownEl.innerHTML = '<div class="brf-finished">🎉 Time reached!</div>';
 		debugEl.textContent = 'Target was: ' + targetDate.toString();
 		clearInterval(timer);
 		return;

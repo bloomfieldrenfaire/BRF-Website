@@ -1,6 +1,20 @@
-/*! Bloomfield Ren Faire version 0.0.9 - Sep 2026 */
+/*! Bloomfield Ren Faire version 0.1.0 - Oct 2026 */
 
-/* Variables */
+/* Table of Contents
+---------------------------
+01 Variables
+02 Basic HTML overrides
+03 Fonts
+04 Icons
+05 Brf Custom Components
+06 Countdown Clock
+07 Brf Slideshow
+08 Pages
+09 Media Queries
+--------------------------- */
+
+/* 01 Variables */
+
 :root{
     --color-primary: #f2e394; /* Tan/Parchment */
     --color-secondary: #588c7e; /* Green */
@@ -24,13 +38,21 @@
     background-color: var(--site-bg);
 }
 
-.brf-cta {
-    border: 2rem solid transparent; /* Required for border-image */
-    border-image: url(../images/cta-border.webp) 31 stretch;
-    padding: 1rem;
+/* 02 Basic HTML overrides */
+
+body {
+    background-color: var(--site-bg);
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Fonts */
+/* I know w3 css has w3-margin-bottom, but 16px just isn't enough for me */
+section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* 03 Fonts */
 
 /* Define and link to our fonts */
 @font-face {
@@ -52,39 +74,10 @@
     font-family: "Magik", "Times New Roman", serif;
 }
 
-body {
-    background-color: var(--site-bg);
-    margin-top: 38px;
-    margin-bottom: 22px;
-}
-
-/* I know w3 css has w3-margin-bottom, but 16px just isn't enough for me */
-section {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-}
-
-.to-top {
-    background-color: var(--color-secondary);
-    position: fixed;
-    right: 1.25rem;
-    bottom: 3.5rem;
-    z-index: 2;
-    opacity: 0.75;
-    border-radius: 2rem;
-    border: 0.1rem solid var(--color-accent);
-    display: inline-block;
-    padding: 0.5rem;
-    vertical-align: middle;
-}
-
-.brf-center {
-    margin: 0 auto;
-}
-
-/* Icons */
+/* 04 Icons */
 /* fill: currentColor makes the icon inherit the CSS `color` property, same as an icon font would with `color`, but with no font build step. */
-.icon {
+
+.brf-icon {
     width: 1.5rem;
     height: 1.5rem;
     fill: currentColor;
@@ -122,44 +115,68 @@ section {
     background-color: black;
 }
 
-/* Countdown */
-.countdown {
-    gap: 1.5rem;
-    justify-content: center;
+/* 05 Brf Custom Components */
+
+.brf-to-top {
+    background-color: var(--color-secondary);
+    position: fixed;
+    right: 1.25rem;
+    bottom: 3.5rem;
+    z-index: 2;
+    opacity: 0.75;
+    border-radius: 2rem;
+    border: 0.1rem solid var(--color-accent);
+    display: inline-block;
+    padding: 0.5rem;
+    vertical-align: middle;
 }
 
-.value {
-    font-size: 2rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-}
-
-.label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #999;
-}
-
-.debug {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
-    display: none; /* Hide this, display: inline to show for debugging help */
-}
-
-.finished {
-    font-size: 1.5rem;
-    color: #4ade80;
+/* Section Links (We need to ajust this, otherwise some of our text may show up underneath our menu) */
+#about, #big-day, #big-day-google-map {
+    scroll-margin-top: 3rem; /* match the menu's height */
 }
 
 .brf-flex-center {
     justify-content: center;
 }
 
-.brf-cta a {
-    text-decoration: none;
+.brf-center {
+    margin: 0 auto;
 }
+
+/* 06 Countdown Clock */
+
+.brf-countdown {
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.brf-value {
+    font-size: 2rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.brf-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999;
+}
+
+.brf-debug {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+    display: none; /* Hide this, display: inline to show for debugging help */
+}
+
+.brf-finished {
+    font-size: 1.5rem;
+    color: #4ade80;
+}
+
+/* 07 Brf Slideshow */
 
 /* this class is also used by javascript so use caution when renaming */
 .brf-slideshow {
@@ -167,7 +184,26 @@ section {
     margin: 0 auto;
 }
 
-/* Pages */
+/* 08 Pages */
+
+/* Home */
+.brf-cta {
+    width: 100%;
+    height: 100%;
+    border: 2rem solid transparent; /* Required for border-image */
+    border-image: url(../images/cta-border.webp) 31 stretch;
+    padding: 1rem;
+    text-decoration: none; /* Remove link underline */
+}
+
+.brf-cta a {
+    text-decoration: none;
+}
+
+/* Events */
+.brf-page-events .w3-flex {
+    padding-top: 2rem;
+}
 
 /* FAQ */
 .brf-q-a {
@@ -179,11 +215,26 @@ section {
     margin: 0 0.5rem 0 0.5rem;
 }
 
-/* Media Queries */
+/* 09 Media Queries */
 
 /* Mobile */
 @media (max-width:600px){
     .brf-slideshow {
         max-height: 400px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    /* Home */
+    .brf-page-home h2 {
+        font-size: 24px;
+    }
+    /* Events */
+    .brf-page-events h3 {
+        font-size: 20px;
+    }
+    /* FAQ */
+    .brf-page-faq p {
+        font-size: 12px;
     }
 }

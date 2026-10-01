@@ -17,7 +17,7 @@
         Currently, we need two menus. The Desktop menu needs to be at least allowed to show the mobile menu button and hide other desktop menu links.
     -->
     <nav class="w3-bar w3-content">
-        <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="mobileMenu()"><svg class="icon"><use href="images/sprite.svg#icon-bars"></use></svg></a>
+        <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="mobileMenu()"><svg class="brf-icon"><use href="images/sprite.svg#icon-bars"></use></svg></a>
         <a href="index.html" class="w3-bar-item w3-button w3-right w3-hide-small w3-text-white">Bloomfield Renaissance Faire</a>
         <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-text-white brf-color-accent">Home</a>
         <a href="events.html" class="w3-bar-item w3-button w3-hide-small w3-text-white">Events</a>
@@ -31,46 +31,46 @@
         <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-text-white">Contact</a>
     </nav>
 </header>
-    <main class="w3-content w3-container brf-color-primary">
+    <main class="w3-content w3-container brf-color-primary brf-page-home">
         <section class="w3-card w3-round-large w3-paper">
             <h1 class="w3-text-center w3-round-large brf-color-accent w3-text-white brf-font-magik">Bloomfield Renaissance Faire</h1>
             <figcaption>
-                <div class="w3-container w3-button w3-flex brf-flex-center brf-cta">
-                    <a href="events.html" target="_blank">
+                <div class="w3-button w3-flex brf-flex-center">
+                    <a href="events.html" target="_self" class="brf-cta">
                         <h2 class="brf-font-magik">Raise the banners,<br>
                             The 2027 Faire approaches!<br>
                             Click here for more information.
                         </h2>
-                        <img src="images/Flags/Tent-2027-Flag.webp" alt="Tent 2027 Flag" class="w3-image">
+                        <img src="images/Animated/Tent-2027-Flag.webp" alt="Tent 2027 Flag" class="w3-image">
                     </a>
                 </div>
                 <h2 class="w3-text-center">The 2027 Bloomfield Ren Faire is July 24, at 1:00 PM</h2>
                 <h3 class="w3-text-center" id="target-label">Countdown until the Faire:</h1>
 
-                <div class="w3-flex countdown w3-topbar" id="countdown">
+                <div class="w3-flex brf-countdown w3-topbar" id="js-countdown">
                     <div class="w3-text-center">
-                        <div class="value" id="days">--</div>
-                        <div class="label">Days</div>
+                        <div class="brf-value" id="js-days">--</div>
+                        <div class="brf-label">Days</div>
                     </div>
                     <div class="w3-text-center">
-                        <div class="value" id="hours">--</div>
-                        <div class="label">Hours</div>
+                        <div class="brf-value" id="js-hours">--</div>
+                        <div class="brf-label">Hours</div>
                     </div>
                     <div class="w3-text-center">
-                        <div class="value" id="minutes">--</div>
-                        <div class="label">Min</div>
+                        <div class="brf-value" id="js-minutes">--</div>
+                        <div class="brf-label">Min</div>
                     </div>
                     <div class="w3-text-center">
-                        <div class="value" id="seconds">--</div>
-                        <div class="label">Sec</div>
+                        <div class="brf-value" id="js-seconds">--</div>
+                        <div class="brf-label">Sec</div>
                     </div>
                 </div>
 
-                <div class="debug" id="debug"></div>
+                <div class="brf-debug" id="js-debug"></div>
             </figcaption>
         </section>
         <section>
-            <h2 class="w3-text-center w3-round brf-color-secondary w3-text-white brf-font-magik">About</h2>
+            <h2 class="w3-text-center w3-round brf-color-secondary w3-text-white brf-font-magik" id="about">About</h2>
             <div class="w3-content w3-flex">
                 <img src="images/Sir-Flowerpot.webp" alt="Sir Flowerpot logo" class="w3-image brf-icon-sir-flower-pot">
             </div>
@@ -82,13 +82,12 @@
         <section>
             <h3 class="w3-text-center w3-round brf-color-secondary w3-text-white brf-font-magik">Website To-Do</h3>
             <ul class="w3-ul w3-border brf-color-accent w3-text-white">
-                <li>Anchor link for cta needs to be changed where class of w3-button is. As of now, w3-button makes you think the whole area is clickable, but it's not. You need to click in the middle.</li>
-                <li>At some point, decide on a soft launch date for a public release (1.0) version of the site.</li>
-                <li>Big Day, Events: Do I just want images? animated webp's would be nice. However, source images might be hard to obtain especially if events don't get finalized until later.</li>
-                <li>images need to be .webp</li>
+                <li>Test live site on mobile</li>
+                <li>Decide if I should remove all the extra flag images I made</li>
                 <li>Make sure responsive layout looks okay on all widths (Desktop/Tablet/Mobile)</li>
-                <li>prettify code</li>
-                <li><mark>If we move to w3.css and have to use custom code, use prefix "brf-"</mark></li>
+                <li>Obtain images of crafts (referring to the events page) being made. Eventually these will be updated with ones from the Big Day.</li>
+                <li>images need to be .webp</li>
+                <li>At some point, decide on a soft launch date for a public release (1.0) version of the site.</li>
                 <li>Remove or Comment out, W3 CSS links (before public release)</li>
             </ul>
         </section>
@@ -101,7 +100,7 @@
             </ul>
         </section>
 
-        <a href="#" class="to-top w3-button"><svg class="icon"><use href="images/sprite.svg#icon-arrow-alt-circle-up"></use></svg> Top</a>
+        <a href="#" class="brf-to-top w3-button"><svg class="brf-icon"><use href="images/sprite.svg#icon-arrow-alt-circle-up"></use></svg> Top</a>
     </main>
     <footer class="w3-bottom w3-container w3-text-center w3-text-white brf-color-secondary">
         <small>Bloomfield Ren Faire &copy <span id="copyright-year"></span></small>

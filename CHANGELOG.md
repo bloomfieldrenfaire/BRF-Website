@@ -26,6 +26,25 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.1.0] - 2026-10-01
+### Added
+- real event example images (a few to start with anyways.)
+- css rule for id links to adjust for menu height
+- brf- prefixes to all custom css (also made sure to rename those in the javascript files.)
+
+### Changed
+- non-external links from opening in a new tab to opening within the current tab
+- renamed flags folder to animated. Moved all animated images files into it
+- made events images, larger
+- how some items are displayed on mobile
+- organized the brf-css file. Added section labels with table of contents at the top
+
+### Fixed
+- the call-to-action button link area not being clickable to the border edge
+
+### Removed
+- placeholder event images
+
 ## [0.0.9] - 2026-09-10
 ### Added
 - animated question marks images to FAQ page hero section
