@@ -1,4 +1,4 @@
-/*! Bloomfield Ren Faire version 0.1.0 - Oct 2026 */
+/*! Bloomfield Ren Faire version 0.1.1 - Oct 2026 */
 
 /* Table of Contents
 ---------------------------
@@ -213,6 +213,18 @@ section {
 
 .brf-q-a p {
     margin: 0 0.5rem 0 0.5rem;
+}
+
+/* Contact */
+.brf-page-contact .brf-icon {
+    width: 3rem;  /* default is 1.5rem */
+    height: 3rem;  /* default is 1.5rem */
+}
+
+/* reset the to-top button back to the default size */
+.brf-page-contact .brf-to-top .brf-icon {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* 09 Media Queries */

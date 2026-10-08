@@ -26,6 +26,21 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.1.1] - 2026-10-08
+### Added
+- knightings event image
+- website title to navbar on mobile
+- Open Graph tags for sharing on social media (I'll have to test on Discord)
+
+### Changed
+- link description text now gets hidden on mobile
+- contact page icons are now larger (except icon-arrow-alt-circle-up, to top botton, since we're using it for navigation)
+- commented out W3 CSS links on home page
+
+### Removed
+- wings from events page
+- unused extra animated flag images
+
 ## [0.1.0] - 2026-10-01
 ### Added
 - real event example images (a few to start with anyways.)
