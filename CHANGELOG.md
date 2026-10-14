@@ -26,6 +26,19 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.1.2] - 2026-10-13
+### Added
+- readme.md
+- og folder (open graph)
+- open graph images for linking on social media websites
+
+### Changed
+- moved W3 CSS links from index.html to readme.md
+- renamed BRF-2026 folder to 2026
+- renamed Animated folder to animated
+- renamed Events folder to events
+- open graph tags
+
 ## [0.1.1] - 2026-10-08
 ### Added
 - knightings event image
