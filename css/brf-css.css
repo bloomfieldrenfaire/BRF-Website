@@ -1,4 +1,4 @@
-/*! Bloomfield Ren Faire version 0.1.2 - Oct 2026 */
+/*! Bloomfield Ren Faire version 0.1.3 - Oct 2026 */
 
 /* Table of Contents
 ---------------------------
@@ -8,9 +8,10 @@
 04 Icons
 05 Brf Custom Components
 06 Countdown Clock
-07 Brf Slideshow
-08 Pages
-09 Media Queries
+07 Pages
+08 Brf Map
+09 Brf Slideshow
+10 Media Queries
 --------------------------- */
 
 /* 01 Variables */
@@ -176,15 +177,7 @@ section {
     color: #4ade80;
 }
 
-/* 07 Brf Slideshow */
-
-/* this class is also used by javascript so use caution when renaming */
-.brf-slideshow {
-    max-height: 680px;
-    margin: 0 auto;
-}
-
-/* 08 Pages */
+/* 07 Pages */
 
 /* Home */
 .brf-cta {
@@ -227,7 +220,69 @@ section {
     height: 1.5rem;
 }
 
-/* 09 Media Queries */
+/* 08 Brf map */
+
+.brf-map-wrap {
+    width: 100%;
+}
+
+.brf-faire-map {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.brf-zone {
+    cursor: pointer;
+    outline: none;
+}
+
+.brf-zone circle {
+    stroke: transparent;
+    stroke-width: 14;
+    transition: stroke .2s;
+}
+
+.brf-zone path {
+    stroke: transparent;
+    stroke-width: 6;
+    transition: stroke .2s;
+}
+
+.brf-zone:hover circle, .brf-zone:focus circle, #restroom:hover path, #restroom:focus path, .brf-zone.active {
+    stroke: var(--color-accent);
+}
+
+#info {
+    margin-top: .75rem;
+    padding: .75rem 1rem;
+    background: #fff;
+    border: 2px solid #2b2118;
+    min-height: 3.5rem;
+}
+
+#info h2 {
+    margin: 0 0 .25rem; font-size: 1.1rem;
+}
+
+#info p {
+    margin: 0 0 .5rem;
+}
+
+#info .brf-hint {
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+/* 09 Brf Slideshow */
+
+/* this class is also used by javascript so use caution when renaming */
+.brf-slideshow {
+    max-height: 680px;
+    margin: 0 auto;
+}
+
+/* 10 Media Queries */
 
 /* Mobile */
 @media (max-width:600px){

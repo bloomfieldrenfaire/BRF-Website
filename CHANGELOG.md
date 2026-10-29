@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning (site link)](http://semver.org/
 ### Security
 - To invite users to upgrade in case of vulnerabilities.
 
+## [0.1.3] - 2026-10-29
+### Added
+- interactive map of events (prototype) to events page
+- brf-map.js (to handle interactive map)
+
 ## [0.1.2] - 2026-10-13
 ### Added
 - readme.md
